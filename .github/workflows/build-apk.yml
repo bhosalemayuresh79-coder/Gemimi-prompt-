@@ -31,9 +31,12 @@ jobs:
           mkdir -p www
           cp index.html style.css app.js www/ || true
 
-      - name: Install Capacitor Packages
+      - name: Bulletproof Capacitor Setup
         run: |
+          rm -f package.json capacitor.config.json
+          npm init -y
           npm install @capacitor/core @capacitor/cli @capacitor/android
+          npx cap init "ClothingApp" "com.clothing.app" --web-dir www
 
       - name: Add Android Project & Sync
         run: |
