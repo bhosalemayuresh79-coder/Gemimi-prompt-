@@ -1,0 +1,8 @@
+{
+  "appId": "com.velour.app",
+  "appName": "VELOUR",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
